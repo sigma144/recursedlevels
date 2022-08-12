@@ -116,8 +116,8 @@ if wet then
     oooo...............o
     oooo...............o
     oooo...............o
-    oooo____oooooooo...o
-    ooooaaaaoooooooo...o
+    oooo___ooooooooo...o
+    ooooaaaooooooooo...o
     ooooaaaaaaaaabbo...o
     ooooaaaaaaaaabbo...o
     ooooaaaaaaaaabbo...o
@@ -134,8 +134,8 @@ else
     oooo...............o
     oooo...............o
     oooo...............o
-    oooo....oooooooo...o
-    oooo....oooooooo...o
+    oooo...ooooooooo...o
+    oooo...ooooooooo...o
     oooo...........o...o
     oooo...........o...o
     oooo...........o...o
