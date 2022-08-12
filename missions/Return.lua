@@ -97,8 +97,8 @@ oo................oo
 oo................oo
 oo................oo
 oo................oo
-ooooooooooooooo___oo
-oooosooosooosooaaaoo
+oooooooooooooooooooo
+oooosooosooosooosooo
 oooooooooooooooooooo
 ]])
 
