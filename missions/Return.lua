@@ -19,7 +19,7 @@ function start()
 =6==6..........ooo4=
 =6==6..........4==4=
 =6==6..........4==4=
-=6==6..oo......4==4=
+=6==6..ooo.....4==4=
 =6==6..........4==4=
 =6==6..........4==4=
 =6==6..........4==4=
@@ -29,7 +29,7 @@ function start()
 
   Spawn("player", 6.5, 12)
   Spawn("crystal", 3.5, 1.5)
-  Global("chest", 8, 8.5, "room2")
+  Global("chest", 8.5, 8.5, "room2")
   Global("box", 10.5, 12)
   
 end
@@ -113,42 +113,42 @@ function roomP1(wet)
 if wet then
   ApplyTiles(glitch, -4, 0, [[
     oooooooooooooooooooo
-    oooo...............o
-    oooo...............o
-    oooo...............o
-    oooo___ooooooooo...o
-    ooooaaaooooooooo...o
-    ooooaaaaaaaaabbo...o
-    ooooaaaaaaaaabbo...o
-    ooooaaaaaaaaabbo...o
-    ooooaaaaooooobbossso
-    ooooaaaaooooobbo...o
-    ooooaaaaooooobbo...o
-    ooooaaaaooooobbo...o
+    oo.................o
+    oo.................o
+    oo.................o
+    oo____oooooooooo...o
+    ooaaaaoooooooooo...o
+    ooaaaaaaaaaaabbo...o
+    ooaaaaaaaaaaabbo___o
+    ooaaaaaaaaaaabboaaao
+    ooaaaaaoooooobbossso
+    ooaaaaaoooooobbo...o
+    ooaaaaaoooooobbo...o
+    ooaaaaaoooooobbo...o
     ooooooooooooobbo....
     ooooooooooooobbo____
 ]])
 else
   ApplyTiles(glitch, -4, 0, [[
     oooooooooooooooooooo
-    oooo...............o
-    oooo...............o
-    oooo...............o
-    oooo...ooooooooo...o
-    oooo...ooooooooo...o
-    oooo...........o...o
-    oooo...........o...o
-    oooo...........o...o
-    oooo....ooooobbossso
-    oooo....ooooobbo...o
-    oooo....ooooobbo...o
-    oooo....ooooobbo...o
+    oo.................o
+    oo.................o
+    oo.................o
+    oo....oooooooooo...o
+    oo....oooooooooo...o
+    oo.............o...o
+    oo.............o...o
+    oo.............o...o
+    oo.....oooooobbossso
+    oo.....oooooobbo...o
+    oo.....oooooobbo...o
+    oo.....oooooobbo...o
     ooooooooooooobbo....
     ooooooooooooobbo____
     ]])
 end
 
-Spawn("player", 6, 12)
+Spawn("player", 4.5, 12)
 Spawn("key", 17.5, 8)
 Spawn("lock", 10.5, 7.5)
 Spawn("lock", 12, 7.5)
