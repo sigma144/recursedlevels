@@ -7,7 +7,7 @@ palace = {["."]="empty", ["<"]="brick_ul", ["["]="brick_l", ["o"]="brick_m", ["]
   ["n"]="pillarv_u", ["I"]="pillarv_c", ["u"]="pillarv_d", ["x"]="block",
   g="grass1", G="grass2", r="ruin1", R="ruin2"}
 
-water = {["_"]="water_surface", ["w"]="water", ["_"]="acid_surface", ["a"]="acid", 
+water = {["W"]="water_surface", ["w"]="water", ["_"]="acid_surface", ["a"]="acid", 
   ["7"]="buoy_ul", ["8"]="buoy_u", ["9"]="buoy_ur",
   ["n"]="buoy_v_u", ["4"]="buoy_l", ["5"]="buoy_c", ["6"]="buoy_r",
   ["|"]="buoy_v_c", ["1"]="buoy_dl", ["2"]="buoy_d", ["3"]="buoy_dr",
@@ -62,12 +62,12 @@ function two(wet)
     ].............Ig..gR
     ].............I.....
     G.............I.....
-    G.............I.....
-    rR^>..........I.....
-    oo]...........u.....
-    oo]........g.....%^^
-    rRrggRggGrRR.....[oo
-    ooorrorrRooo.....[oG
+    r^^^>.........I.....
+    ooo]..........I.....
+    ooo]..........u.....
+    rRrggRggGrRR.....%^^
+    oorrorrRoooo.....[oo
+    oooooorooooo.....[oG
     oooooooooooo-----GRg
   ]])
   ApplyTiles(water, 13, 0, [[
@@ -77,9 +77,8 @@ function two(wet)
   ]])
   Spawn("player", 19, 10)
   Spawn("cauldron", 19, 10, "start")
-  Spawn("chest", 3, 8, "acidroom")
-  Spawn("chest", 8, 11, "jarroom")
-  Global("generic", 5.5, 11)
+  Spawn("chest", 3, 7, "acidroom")
+  Spawn("chest", 8, 10, "jarroom")
 end
 
 function jarroom(wet)
@@ -98,7 +97,7 @@ function jarroom(wet)
     oooo|.............{#}
     oooo|......%^^^^^&oo
     oooo|......[oooooooo
-    oooo|--%^^&[oooooooo
+    oooo|%^^^^&[oooooooo
   ]])
   if wet then
     ApplyTiles(water, -4, 0, [[
@@ -116,7 +115,7 @@ function jarroom(wet)
     .....aaaaaaaaaaaaa..
     .....aaaaaa.........
     .....aaaaaa.........
-    .....--.............
+    ....................
   ]])
   else
     ApplyTiles(water, 0, 0, [[
@@ -139,40 +138,40 @@ end
 
 function acidroom(wet)
   ApplyTiles(palace, -4, 0, [[
-    ....................
-   .....................
-    _\)..............(/_
-    #}................{#
-    #}................{#
-    #}................{#
-    #}................{#
-    #}................{#
-    #}................{#
-    #}................{#
-    #}....../__\......{#
-    #}......{##}......{#
-    #}......{##}......{#
+    xxxxxxxxxxxxxxxxxxxx
+    }..................{
+    }..................{
+    }........^^........{
+    }..................{
+    }..................{
+    }....--......--....{
+    }..................{
+    }..................{
+    }........--........{
+    }..................{
+    }..................{
+    xxxxxxxxxxxxxxxxxxxx
     xxxxxxxxxxxxxxxxxxxx
     xxxxxxxxxxxxxxxxxxxx
   ]])
   if wet then
     ApplyTiles(water, -4, 0, [[
     ....................
-    ....................
-    ....................
-    ....................
-    ..________________..
-    ..aaaaaaaaaaaaaaaa..
-    ..aaaaaaaaaaaaaaaa..
-    ..aaaaaaaaaaaaaaaa..
-    ..aaaaaaaaaaaaaaaa..
-    ..aaaaaaaaaaaaaaaa..
-    ..aaaaaa....aaaaaa..
-    ..aaaaaa....aaaaaa..
-    ..aaaaaa....aaaaaa..
+    .aaaaaaaaaaaaaaaaaa.
+    .aaaaaaaaaaaaaaaaaa.
+    .aaaaaaaa..aaaaaaaa.
+    .aaaaaaaaaaaaaaaaaa.
+    .aaaaaaaaaaaaaaaaaa.
+    .aaaa--aaaaaa--aaaa.
+    .aaaaaaaaaaaaaaaaaa.
+    .aaaaaaaaaaaaaaaaaa.
+    .aaaaaaaa--aaaaaaaa.
+    .aaaaaaaaaaaaaaaaaa.
+    .aaaaaaaaaaaaaaaaaa.
     xxxxxxxxxxxxxxxxxxxx
     xxxxxxxxxxxxxxxxxxxx
-    ]])
+    xxxxxxxxxxxxxxxxxxxx
+  ]])
   else
     ApplyTiles(water, -4, 0, [[
     ....................
@@ -185,16 +184,15 @@ function acidroom(wet)
     ....................
     ....................
     ....................
-    ..______....______..
-    ..aaaaaa....aaaaaa..
-    ..aaaaaa....aaaaaa..
+    .__________________.
+    .aaaaaaaaaaaaaaaaaa.
+    xxxxxxxxxxxxxxxxxxxx
     xxxxxxxxxxxxxxxxxxxx
     xxxxxxxxxxxxxxxxxxxx
 ]])
-
   end
-  Spawn("player", 10, 9)
-
+  Spawn("player", 10, 7.5)
+  Global("generic", 10, 2)
 end
 
 function reject()
@@ -245,9 +243,9 @@ function diamondroom(wet)
     oooooooooooooo..o..o
   ]])
   Spawn("player", 2, 7.2)
-  Spawn("generic", 6, 13)
-  Spawn("generic", 8, 13)
-  Spawn("yield", 12, 13)
+  Spawn("generic", 9, 13)
+  Spawn("generic", 11, 13)
+  Spawn("yield", 5, 13)
   Spawn("lock", 13.52, 5.5)
   Spawn("lock", 15.02, 5.5)
   Spawn("diamond", 17.5, 1.5)
@@ -469,7 +467,7 @@ end
 
 
 
-tiles = "../custom/tiles/whitepalace"
+tiles = "tiles/whitepalace"
 pattern = "backgrounds/tubes"
 dark = { start = {0, 0.3, 0.1}, two = {0.7, 0.25, 0}, reject = {0.25, 0, 0.35}, threadless = {0, 0.4, 0.75} }
 light = { start = {0, 0.5, 0.2}, two = {0.9, 0.5, 0}, reject = {0.5, 0, 0.7}, threadless = {0, 0.5, 0.9} }
