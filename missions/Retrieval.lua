@@ -97,7 +97,7 @@ function jarroom(wet)
     oooo|.............{#}
     oooo|......%^^^^^&oo
     oooo|......[oooooooo
-    oooo|%^^^^&[oooooooo
+    oooo|--%^^&[oooooooo
   ]])
   if wet then
     ApplyTiles(water, -4, 0, [[
@@ -115,7 +115,7 @@ function jarroom(wet)
     .....aaaaaaaaaaaaa..
     .....aaaaaa.........
     .....aaaaaa.........
-    ....................
+    .....--.............
   ]])
   else
     ApplyTiles(water, 0, 0, [[
