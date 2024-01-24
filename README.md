@@ -13,7 +13,7 @@ Here are all the levels and their estimated difficulty levels:
 - Return (Ruby): Easy-Medium
 - Escape (Crystal): Medium-Hard
 - Escape (Diamond): Very Hard
-- Retrieval (Crystal): Hard
+- Retrieval (Crystal): Hard-Very Hard
 - Retrieval (Diamond): Very Hard
 - Retrieval (Ruby): Medium
 
